@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { FC } from 'react'
+import { useNavigate } from 'react-router'
 import { ButtonMain } from './../shared/button'
 
 interface IProps {
@@ -8,10 +9,16 @@ interface IProps {
 }
 
 export const ModalDelete: FC<IProps> = ({ id, setIsModalDelete }) => {
+	const navigate = useNavigate()
+	const backToMain = () => {
+		navigate('/main')
+	}
 	const handleDeleteAd = () => {
 		axios.delete(`http://localhost:8081/productTypes/${id}`)
 		setIsModalDelete(false)
+		backToMain()
 	}
+
 	return (
 		<div
 			onClick={() => setIsModalDelete(false)}

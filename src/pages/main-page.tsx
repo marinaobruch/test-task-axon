@@ -39,7 +39,7 @@ export const MainPage = () => {
 	useEffect(() => {
 		setErrors('')
 		fetchData()
-	}, [products])
+	}, [])
 
 	const moveToCreateProduct = () => {
 		navigate('/create-product')
