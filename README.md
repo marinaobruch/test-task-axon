@@ -22,7 +22,10 @@
 
 ## Реализовано
 
-- Проект реализован на базе фреймворка React с использованием TypeScript
+### Стек:
+
+React, TypeScript, Tailwind, Vite, Axios, React Router, React Hook Form и React Select, Redux Toolkit
+
 - Загрузка продукции на главную страницу "http://localhost:3000/main"
 - Loader при загрузке продукции
 - Обработка ошибок сервера при получении данных
