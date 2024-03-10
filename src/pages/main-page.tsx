@@ -12,7 +12,6 @@ export const MainPage = () => {
 	const [errors, setErrors] = useState<string>('')
 	const [isModalDelete, setIsModalDelete] = useState(false)
 	const [deleteId, setDeleteId] = useState('')
-
 	const navigate = useNavigate()
 
 	const fetchData = () => {
@@ -39,7 +38,7 @@ export const MainPage = () => {
 	useEffect(() => {
 		setErrors('')
 		fetchData()
-	}, [])
+	}, [isModalDelete])
 
 	const moveToCreateProduct = () => {
 		navigate('/create-product')

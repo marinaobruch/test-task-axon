@@ -15,6 +15,7 @@ export const ModalDelete: FC<IProps> = ({ id, setIsModalDelete }) => {
 	}
 	const handleDeleteAd = () => {
 		axios.delete(`http://localhost:8081/productTypes/${id}`)
+
 		setIsModalDelete(false)
 		backToMain()
 	}
